@@ -1,0 +1,31 @@
+name: Philips Hue Wall Switch
+service: Zigbee2MQTT
+event_type: mqtt
+mqtt_topic_format: zigbee2mqtt/+/action
+buttons:
+  - actions:
+      - title: left press
+        conditions:
+          - key: payload
+            value: left_press
+      - title: left press release
+        conditions:
+          - key: payload
+            value: left_press_release
+      - title: left hold
+        conditions:
+          - key: payload
+            value: left_hold
+      - title: right press
+        conditions:
+          - key: payload
+            value: right_press
+      - title: right press release
+        conditions:
+          - key: payload
+            value: right_press_release
+      - title: left hold
+        conditions:
+          - key: payload
+            value: right_hold            
+
